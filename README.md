@@ -43,7 +43,11 @@ This tool provides a basic assessment and general recommendations. It is not a d
 Contributions to improve the tool are welcome. Please feel free to submit issues or pull requests to the GitHub repository.
 
 ## License
-[Insert appropriate license information here]
+This project is licensed under the MIT License. This means:
+
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software.
+You must include the copyright notice and the permission notice found in the LICENSE file in all copies or substantial portions of the software.
+The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement.
 
 ## Contact
 For more information about the Mindfulness Center and our programs, please visit [Mindfulness Center website URL].
