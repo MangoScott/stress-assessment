@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stress Assessment | Mindfulness Center</title>
+    <title>Teacher Training Readiness | Mindfulness Center</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
@@ -103,67 +103,67 @@
 </head>
 <body>
     <div class="title-container">
-        <span class="material-icons title-icon">spa</span>
+        <span class="material-icons title-icon">school</span>
         <div>
-            <h1>Stress Assessment</h1>
-            <p class="subtitle"><a href="https://www.themindfulnesscenter.org/" target="_blank">The Mindfullness Center</a></p>
+            <h1>Teacher Training Readiness</h1>
+            <p class="subtitle">Mindfulness Center</p>
         </div>
     </div>
     <div id="quiz">
         <div class="question">
-            <p>1. How often do you feel overwhelmed by your daily responsibilities?</p>
+            <p>1. How many years of personal mindfulness or yoga practice do you have?</p>
             <select id="q1">
-                <option value="1">Rarely</option>
-                <option value="2">Sometimes</option>
-                <option value="3">Often</option>
-                <option value="4">Almost always</option>
+                <option value="1">Less than 1 year</option>
+                <option value="2">1-2 years</option>
+                <option value="3">3-5 years</option>
+                <option value="4">More than 5 years</option>
             </select>
         </div>
         <div class="question">
-            <p>2. How would you rate your overall energy levels?</p>
+            <p>2. How often do you currently practice mindfulness or yoga?</p>
             <select id="q2">
-                <option value="1">High</option>
-                <option value="2">Moderate</option>
-                <option value="3">Low</option>
-                <option value="4">Very low</option>
+                <option value="1">Occasionally (less than once a week)</option>
+                <option value="2">1-2 times per week</option>
+                <option value="3">3-4 times per week</option>
+                <option value="4">5 or more times per week</option>
             </select>
         </div>
         <div class="question">
-            <p>3. How often do you experience physical tension or pain?</p>
+            <p>3. Have you participated in any mindfulness or yoga workshops or retreats?</p>
             <select id="q3">
-                <option value="1">Rarely</option>
-                <option value="2">Sometimes</option>
-                <option value="3">Often</option>
-                <option value="4">Almost always</option>
+                <option value="1">Never</option>
+                <option value="2">Once or twice</option>
+                <option value="3">Several times</option>
+                <option value="4">Regularly (at least once a year)</option>
             </select>
         </div>
         <div class="question">
-            <p>4. How would you describe your sleep quality?</p>
+            <p>4. How comfortable are you with the idea of teaching or guiding others?</p>
             <select id="q4">
-                <option value="1">Excellent</option>
-                <option value="2">Good</option>
-                <option value="3">Fair</option>
-                <option value="4">Poor</option>
+                <option value="1">Not comfortable at all</option>
+                <option value="2">Somewhat uncomfortable</option>
+                <option value="3">Moderately comfortable</option>
+                <option value="4">Very comfortable</option>
             </select>
         </div>
         <div class="question">
-            <p>5. How often do you take time for self-care or relaxation?</p>
+            <p>5. How much time can you dedicate to a rigorous training program (200+ hours)?</p>
             <select id="q5">
-                <option value="1">Daily</option>
-                <option value="2">A few times a week</option>
-                <option value="3">Occasionally</option>
-                <option value="4">Rarely or never</option>
+                <option value="1">Less than 5 hours per week</option>
+                <option value="2">5-10 hours per week</option>
+                <option value="3">10-15 hours per week</option>
+                <option value="4">More than 15 hours per week</option>
             </select>
         </div>
-        <button onclick="calculateStress()">
+        <button onclick="calculateReadiness()">
             <span class="material-icons">calculate</span>
-            Calculate Stress Level
+            Assess Readiness
         </button>
     </div>
     <div id="result"></div>
 
     <script>
-        function calculateStress() {
+        function calculateReadiness() {
             const scores = [
                 parseInt(document.getElementById('q1').value),
                 parseInt(document.getElementById('q2').value),
@@ -172,37 +172,35 @@
                 parseInt(document.getElementById('q5').value)
             ];
             const totalScore = scores.reduce((a, b) => a + b, 0);
-            let result = '<h2>Your Results</h2>';
+            let result = '<h2>Your Readiness Assessment</h2>';
 
             if (totalScore <= 8) {
-                result += "<p>Your stress levels appear to be low. Keep up your good habits! We recommend:</p>";
+                result += "<p>You're at the beginning of your mindfulness journey. We recommend:</p>";
                 result += "<ul>";
-                result += "<li>Daily 10-minute meditation</li>";
-                result += "<li>Regular gentle yoga practice</li>";
+                result += "<li>Deepening your personal practice before considering teacher training</li>";
+                result += "<li>Exploring our introductory workshops and classes</li>";
+                result += "<li>Considering a mindfulness or yoga retreat to immerse yourself in the practice</li>";
                 result += "</ul>";
             } else if (totalScore <= 13) {
-                result += "<p>You're experiencing moderate stress. Consider these practices:</p>";
+                result += "<p>You have a good foundation, but might benefit from more experience before teacher training. Consider:</p>";
                 result += "<ul>";
-                result += "<li>15-minute daily mindfulness exercises</li>";
-                result += "<li>Twice-weekly yoga sessions</li>";
-                result += "<li>Regular nature walks</li>";
+                result += "<li>Increasing the frequency of your personal practice</li>";
+                result += "<li>Attending advanced workshops or seminars</li>";
+                result += "<li>Exploring different styles of mindfulness or yoga to broaden your experience</li>";
                 result += "</ul>";
             } else if (totalScore <= 18) {
-                result += "<p>Your stress levels are high. We strongly recommend:</p>";
+                result += "<p>You're well-prepared for teacher training. Next steps could include:</p>";
                 result += "<ul>";
-                result += "<li>20-minute daily meditation</li>";
-                result += "<li>Regular stress-reduction yoga classes</li>";
-                result += "<li>Mindful breathing exercises throughout the day</li>";
-                result += "<li>Consider a nutrition consultation</li>";
+                result += "<li>Reviewing our teacher training program options</li>";
+                result += "<li>Scheduling a consultation with one of our trainers</li>";
+                result += "<li>Preparing for the time commitment of intensive training</li>";
                 result += "</ul>";
             } else {
-                result += "<p>You're experiencing very high stress. Please consider:</p>";
+                result += "<p>You're exceptionally well-prepared for advanced teacher training. We suggest:</p>";
                 result += "<ul>";
-                result += "<li>Scheduling a consultation with our specialists</li>";
-                result += "<li>Daily 30-minute meditation practice</li>";
-                result += "<li>Gentle daily yoga or tai chi</li>";
-                result += "<li>Stress-reduction workshops</li>";
-                result += "<li>Exploring nutritional support for stress management</li>";
+                result += "<li>Applying for our most comprehensive teacher training programs</li>";
+                result += "<li>Considering specializations or advanced certifications</li>";
+                result += "<li>Exploring opportunities to assist in workshops or retreats</li>";
                 result += "</ul>";
             }
 
